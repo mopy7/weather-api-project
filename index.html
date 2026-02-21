@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEATHER // NOTHING</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dot-overlay"></div>
+    <main class="container">
+        <header>
+            <h1 class="logo">WEATHER<span>(01)</span></h1>
+        </header>
+
+        <section class="search-box">
+            <input type="text" id="city-input" placeholder="ENTER CITY..." autocomplete="off">
+            <button id="search-btn">SEARCH</button>
+        </section>
+
+        <section class="weather-display" id="weather-display">
+            <!-- Initial state or mock data will be injected here -->
+            <div class="loading">READY_</div>
+        </section>
+
+        <footer>
+            <p class="timestamp" id="time-display">00:00:00</p>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

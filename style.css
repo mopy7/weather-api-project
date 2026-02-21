@@ -1,0 +1,159 @@
+@font-face {
+    font-family: 'NDot';
+    src: url('https://raw.githubusercontent.com/nothing-tech/nothing-ui/main/fonts/NDot-45.woff2') format('woff2');
+}
+
+:root {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --border-color: #333333;
+    --accent-color: #ff0000; /* Subtle Nothing Red */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Dotted Background */
+.dot-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
+    background-size: 24px 24px;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    position: relative;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+}
+
+header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+}
+
+.logo span {
+    color: var(--border-color);
+    font-size: 0.8rem;
+    margin-left: 10px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+input {
+    flex: 1;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 12px;
+    outline: none;
+    letter-spacing: 2px;
+}
+
+button {
+    background: var(--text-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+button:hover {
+    background: #cccccc;
+}
+
+.weather-display {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.temp-main {
+    font-size: 5rem;
+    line-height: 1;
+    margin: 1rem 0;
+}
+
+.city-name {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.detail-item {
+    font-size: 0.7rem;
+    color: #888;
+}
+
+.detail-value {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-top: 5px;
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: right;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+}
+
+.timestamp {
+    font-size: 0.7rem;
+    color: var(--border-color);
+}
+
+.loading {
+    letter-spacing: 5px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
