@@ -7,15 +7,17 @@
     --bg-color: #000000;
     --text-color: #ffffff;
     --border-color: #333333;
-    --accent-color: #ff0000; /* Subtle Nothing Red */
+    --accent-color: #ff0000; /* Subtle Red Accent */
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'NDot', 'Courier New', Courier, monospace;
     text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
